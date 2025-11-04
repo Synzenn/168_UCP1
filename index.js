@@ -29,3 +29,27 @@ app.post('/kandang', async (req, res) => {
         res.status(500).send({message: error.message});
     }
 });
+
+app.get('/kandang', async (req, res) => {
+    try{
+        const kandang = await db.Kandang.findAll();
+        res.send(kandang);
+    } catch(error){
+        res.status(500).send({message: error.message});
+    }
+});
+
+app.put('/kandang/:id', async (req, res) => {
+    const id = req.params.id;
+    const data = req.body;
+    try{
+        const kandang = await db.Kandang.findByPk(id);
+        if(!akndang){
+            return res.status(404).send({message: 'Kandang not found'});
+        }
+        await kandang.update(data);
+        res.send({message: "Kandang berhasil diupdate"}, kandang);
+    } catch(error) {
+        res.status(500).send({message: error.message});
+    }
+});
