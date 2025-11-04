@@ -16,6 +16,7 @@
 
 # GET
 --------
-![Uploading image.png…]()
+<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/c9aa68df-6897-4b97-aae6-0586b1b8dc3a" />
+
 
 
